@@ -1,16 +1,31 @@
-
 import { BiMenu } from "react-icons/bi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-
-
 
 const Header = () => {
   const [show, setShow] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div>
-      <header className="absolute w-full flex justify-between p-4 items-center">
-        <div className="flex w-full items-center justify-between px-[20px] py-[12px] lg:container lg:mx-auto lg:px-20">
+    <div className="">
+      <header
+        className={`fixed z-10 w-full flex justify-between p-4 items-center transition duration-300 ${
+          isScrolled ? "bg-gray-800" : ""
+        }`}
+      >
+        <div className="flex w-full items-center justify-between px-[20px] py-[1px] lg:container lg:mx-auto lg:px-20">
           <Link
             to="/"
             className="flex items-center text-4xl z-10 text-white font-bold border-white"
@@ -26,7 +41,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to=""
-                  className="text-xl block lg:inline-block z-10 relative underline underline-offset-1 hover:text-blue-50"
+                  className="text-xl block lg:inline-block z-10 relative underline underline-offset-1 text-gray-500 hover:text-blue-50"
                 >
                   Home
                 </NavLink>
@@ -34,7 +49,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="about"
-                  className="text-xl block lg:inline-block z-10 relative hover:text-blue-50"
+                  className="text-xl block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
                 >
                   About
                 </NavLink>
@@ -42,7 +57,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="Gallery"
-                  className="text-xl block lg:inline-block z-10 relative hover:text-blue-50"
+                  className="text-xl block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
                 >
                   Gallery
                 </NavLink>
@@ -50,7 +65,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="pricing"
-                  className="text-xl block lg:inline-block z-10 relative hover:text-blue-50"
+                  className="text-xl block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
                 >
                   Pricing
                 </NavLink>
@@ -58,7 +73,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="contact"
-                  className="text-xl block lg:inline-block z-10 relative hover:text-blue-50"
+                  className="text-xl block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
                 >
                   Contact
                 </NavLink>
@@ -117,6 +132,10 @@ const Header = () => {
       )}
     </div>
   );
+};
+
+export default Header;
+
 }
 
 export default Header;
