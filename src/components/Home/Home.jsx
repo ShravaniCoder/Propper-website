@@ -1,4 +1,4 @@
-import Background from "../../img/gallery-02.jpg";
+import Background from "../../img/gallery-big-02.jpg";
 import { FaArrowRight } from "react-icons/fa";
 import Background2 from "../../img/bg-01.jpg";
 import Image1 from "../../img/icon-white-shield.png";
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="bg-black bg-opacity-70 absolute inset-0" />
 
         <div className="absolute top-10 left-0 right-0 lg:flex lg:justify-between bg-black/90 lg:px-[200px]">
-          <div className="flex-col items-center mr-15 sm:z-10">
+          <div className="flex-col items-center mr-15">
             <img
               src={Image1}
               alt="Shield"
