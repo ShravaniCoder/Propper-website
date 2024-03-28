@@ -21,19 +21,19 @@ const Header = () => {
   return (
     <div className="">
       <header
-        className={`fixed z-10 w-full flex justify-between p-4 items-center transition duration-300 ${
-          isScrolled ? "bg-gray-800" : ""
+        className={`fixed z-10 w-full flex justify-between p-4 items-center bg-black transition duration-300 ${
+          isScrolled ? "bg-black" : ""
         }`}
       >
         <div className="flex w-full items-center justify-between px-[20px] py-[1px] lg:container lg:mx-auto lg:px-20">
           <Link
             to="/"
-            className="flex items-center text-4xl z-10 text-white font-bold border-white"
+            className="flex items-center text-2xl z-10 text-white font-bold border-white"
           >
             Propper.
           </Link>
           <BiMenu
-            className="text-3xl text-white z-20 lg:hidden"
+            className="text-3xl z-50 text-white lg:hidden"
             onClick={() => setShow(!show)}
           />
           <div className="hidden justify-between items-center lg:flex lg:w-auto">
@@ -41,7 +41,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to=""
-                  className="text-xl block lg:inline-block z-10 relative underline underline-offset-1 text-gray-500 hover:text-blue-50"
+                  className="text-sm font-bold block lg:inline-block z-10 relative underline underline-offset-1 text-gray-500 hover:text-blue-50"
                 >
                   Home
                 </NavLink>
@@ -49,7 +49,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="about"
-                  className="text-xl block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
+                  className="text-sm font-bold block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
                 >
                   About
                 </NavLink>
@@ -57,7 +57,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="Gallery"
-                  className="text-xl block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
+                  className="text-sm font-bold block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
                 >
                   Gallery
                 </NavLink>
@@ -65,7 +65,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="pricing"
-                  className="text-xl block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
+                  className="text-sm font-bold block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
                 >
                   Pricing
                 </NavLink>
@@ -73,7 +73,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="contact"
-                  className="text-xl block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
+                  className="text-sm font-bold block lg:inline-block z-10 relative text-gray-500 hover:text-blue-50"
                 >
                   Contact
                 </NavLink>
