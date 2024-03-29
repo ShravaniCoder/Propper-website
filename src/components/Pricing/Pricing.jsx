@@ -30,7 +30,7 @@ const Pricing = () => {
 
   return (
     <div className="p-2">
-      <div className="lg:px-[180px] px-2 py-2 lg:py-[80px]">
+      <div className="lg:px-[180px] px-2 py-2 lg:py-[60px]">
         <h1 className="text-3xl font-semibold">Pricing.</h1>
         <div className="lg:flex justify-between mt-10">
           <div className="mt-5 p-2">
