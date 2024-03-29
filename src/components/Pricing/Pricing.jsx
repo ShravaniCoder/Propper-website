@@ -87,7 +87,7 @@ const Pricing = () => {
 
           <div className="flex flex-col text-center lg:w-[35vh] sm:w-[38vh] mt-4 border-[12px] border-gray-200">
             <div className="items-center lg:ml-6 ml-[50px] px-5">
-              <header className="text-sm text-white p-1 w-[20vh] bg-peacock-green items-center text-center">
+              <header className="text-sm text-white p-1 w-[18vh] bg-peacock-green items-center text-center">
                 Best value for money
               </header>
             </div>
