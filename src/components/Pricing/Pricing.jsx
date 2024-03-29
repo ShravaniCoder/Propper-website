@@ -2,31 +2,34 @@ import { useState } from "react";
 import bgImg from "../../img/gallery-big-01.jpg";
 
 
+
 const Pricing = () => {
   const [show, setShow] = useState(false)
   const [show1, setShow1] = useState(false)
   const [show2, setShow2] = useState(false)
 
- const handleShow = () => {
-   setShow(!show);
-   setShow2(false); 
-   setShow1(false); 
- };
+  const handleShow = () => {
+    setShow(!show);
+    setShow2(false);
+    setShow1(false);
+  };
 
- const handleShow1 = () => {
-   setShow1(!show1);
-   setShow2(false); 
-   setShow(false); 
- };
+  const handleShow1 = () => {
+    setShow1(!show1);
+    setShow2(false);
+    setShow(false);
+  };
 
- const handleShow2 = () => {
-   setShow2(!show2);
-   setShow1(false); 
-   setShow(false); 
- };
+  const handleShow2 = () => {
+    setShow2(!show2);
+    setShow1(false);
+    setShow(false);
+  };
+  
+  
 
   return (
-    <div>
+    <div className="p-2">
       <div className="lg:px-[180px] px-2 py-2 lg:py-[80px]">
         <h1 className="text-3xl font-semibold">Pricing.</h1>
         <div className="lg:flex justify-between mt-10">
@@ -53,7 +56,7 @@ const Pricing = () => {
             </div>
           </div>
 
-          <div className="flex flex-col text-center p-5 w-[35vh] border-[12px] mt-4 border-gray-100">
+          <div className="flex flex-col text-center p-5 lg:w-[35vh] sm:w-[38vh]  border-[12px] mt-4 border-gray-100">
             <h3 className="text-2xl mt-6 font-bold">
               2 Room <br /> Apartment
             </h3>
@@ -71,19 +74,54 @@ const Pricing = () => {
             <hr />
             <p className="mb-1">12</p>
 
-            <button className="text-xs rounded-full items-center w-[20vh] mt-5 p-2 border border-gray-800">
+            <button className="text-xs ml-6 rounded-full items-center w-[20vh] mt-4 p-1 border border-gray-400">
               APARTMENT DETAILS
             </button>
             <br />
-            <button className="item-center text-center mt-7 mb-3 p-2 bg-black text-white text-sm rounded-full shadow-sm hover:bg-slate-700">
-              CONTACT US
-            </button>
+            <div className="w-35px">
+              <button className="item-center text-center mt-7 mb-3 p-3 bg-black text-white font-semibold text-xs rounded-full shadow-sm hover:bg-slate-700">
+                CONTACT US
+              </button>
+            </div>
           </div>
 
-          <div className="flex flex-col text-center p-4 w-[35vh] mt-4 border-[12px] border-gray-200">
-            <header className="text-sm w-[20vh] ml-5 bg-green-500 items-center text-center">
-              Best value for money
-            </header>
+          <div className="flex flex-col text-center lg:w-[35vh] sm:w-[38vh] mt-4 border-[12px] border-gray-200">
+            <div className="items-center lg:ml-6 ml-[50px] px-5">
+              <header className="text-sm w-[20vh] bg-green-500 items-center text-center">
+                Best value for money
+              </header>
+            </div>
+            <div className="p-5">
+              <h3 className="text-2xl mt-6 font-bold">
+                3 Room <br /> Apartment
+              </h3>
+              <p className="text-xs mt-3 text-gray-600 line-through">$99,999</p>
+              <h4 className="text-xl">$79,000</h4>
+              <p className="mt-5 mb-1">
+                135m<sup>2</sup>
+              </p>
+              <hr />
+              <p className="mb-1">
+                45m<sup>2</sup>
+              </p>
+              <hr />
+              <p className="mb-1">X</p>
+              <hr />
+              <p className="mb-1">7</p>
+
+              <button className="text-xs ml-2 mb-2 rounded-full mt-3 p-1 w-[20vh] border border-gray-400">
+                APARTMENT DETAILS
+              </button>
+              <br />
+              <div className="w-35px">
+                <button className="item-center text-center mt-7 mb-3 p-3 bg-black text-white font-semibold text-xs rounded-full shadow-sm hover:bg-slate-700">
+                  CONTACT US
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col text-center p-5 lg:w-[35vh] sm:w-[38vh] mt-4 border-[12px] border-gray-200">
             <h3 className="text-2xl mt-6 font-bold">
               3 Room <br /> Apartment
             </h3>
@@ -101,48 +139,23 @@ const Pricing = () => {
             <hr />
             <p className="mb-1">7</p>
 
-            <button className="text-xs rounded-full mt-2 p-2 w-[20vh] border border-gray-800">
+            <button className="text-xs ml-6 rounded-full mt-4 p-1 w-[20vh] border border-gray-400">
               APARTMENT DETAILS
             </button>
             <br />
-            <button className="item-center text-center mt-5 mb-3 p-2 bg-black text-white text-sm rounded-full shadow-sm hover:bg-slate-700">
-              CONTACT US
-            </button>
-          </div>
-
-          <div className="flex flex-col text-center p-4 w-[35vh] mt-4 sm:items-center border-[12px] border-gray-100">
-            <h3 className="text-2xl mt-6 font-bold text-center">
-              4 Room <br /> Apartment
-            </h3>
-            <p className="text-xs mt-3 text-gray-600 line-through">$129,000</p>
-            <h4 className="text-xl">$79,000</h4>
-            <p className="mt-5 mb-1">
-              198m<sup>2</sup>
-            </p>
-            <hr />
-            <p className="mb-1">
-              67m<sup>2</sup>
-            </p>
-            <hr />
-            <p className="mb-1">X</p>
-            <hr />
-            <p className="mb-1">9</p>
-
-            <button className="text-xs rounded-full p-2 mt-5 border w-[20vh] border-gray-800">
-              APARTMENT DETAILS
-            </button>
-            <br />
-            <button className="item-center text-center mt-7 mb-3 p-2 bg-black text-white text-sm rounded-full shadow-sm hover:bg-slate-700">
-              CONTACT US
-            </button>
+            <div className="w-35px">
+              <button className="item-center text-center mt-7 mb-3 p-3 bg-black text-white font-semibold text-xs rounded-full shadow-sm hover:bg-slate-700">
+                CONTACT US
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="lg:px-[180px] px-2">
         <h1 className="text-3xl font-bold mt-20 lg:mb-20 mb-4">FAQ</h1>
-        <div className="lg:flex justify-between">
-          <div className="flex-col text-sm w-full lg:w-[70%]">
+        <div className="lg:flex md:flex justify-between">
+          <div className="flex-col text-sm w-full lg:w-[70%] md:w-[45%]">
             <div className="items bg-gray-100 px-4 py-2 mb-2 rounded-md ">
               <h2 onClick={handleShow} className="cursor-pointer text-xs">
                 Quite and peaceful location near the nature
@@ -178,10 +191,7 @@ const Pricing = () => {
               )}
             </div>
             <div className="items bg-gray-100 px-4 py-2 mb-2 rounded-md ">
-              <h2
-                onClick={handleShow2}
-                className="cursor-pointer text-xs"
-              >
+              <h2 onClick={handleShow2} className="cursor-pointer text-xs">
                 Lots of parking places, even for your visitors
                 <span className="plus-icon float-right">+</span>
               </h2>
@@ -197,7 +207,7 @@ const Pricing = () => {
               )}
             </div>
           </div>
-          <div className="border-[12px] mb-7 lg:ml-10 p-2">
+          <div className="border-[12px] mb-7 lg:ml-10 p-2 md:w-[50%]">
             <div className="px-[2px] flex-col lg:w-full">
               <h2 className="text-sm font-semibold mb-4 mt-10">
                 Subscribe to our newsletter to get the latest information
@@ -224,7 +234,7 @@ const Pricing = () => {
         <img
           src={bgImg}
           alt="bgImg"
-          className="lg:h-64 sm:h-5 brightness-50 lg:w-full"
+          className="lg:h-64 sm:h-5 brightness-50 lg:w-full md:w-full md:h-64"
         />
       </div>
     </div>
