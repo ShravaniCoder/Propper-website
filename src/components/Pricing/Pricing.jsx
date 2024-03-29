@@ -74,7 +74,7 @@ const Pricing = () => {
             <hr />
             <p className="mb-1">12</p>
 
-            <button className="text-xs ml-6 rounded-full items-center w-[20vh] mt-4 p-1 border border-gray-400">
+            <button className="text-xs ml-6 rounded-full font-semibold items-center w-[20vh] mt-4 p-1 border border-gray-400">
               APARTMENT DETAILS
             </button>
             <br />
@@ -87,7 +87,7 @@ const Pricing = () => {
 
           <div className="flex flex-col text-center lg:w-[35vh] sm:w-[38vh] mt-4 border-[12px] border-gray-200">
             <div className="items-center lg:ml-6 ml-[50px] px-5">
-              <header className="text-sm w-[20vh] bg-green-500 items-center text-center">
+              <header className="text-sm text-white p-1 w-[20vh] bg-peacock-green items-center text-center">
                 Best value for money
               </header>
             </div>
@@ -109,7 +109,7 @@ const Pricing = () => {
               <hr />
               <p className="mb-1">7</p>
 
-              <button className="text-xs ml-2 mb-2 rounded-full mt-3 p-1 w-[20vh] border border-gray-400">
+              <button className="text-xs ml-2 mb-2 font-semibold rounded-full mt-3 p-1 w-[20vh] border border-gray-400">
                 APARTMENT DETAILS
               </button>
               <br />
@@ -123,23 +123,25 @@ const Pricing = () => {
 
           <div className="flex flex-col text-center p-5 lg:w-[35vh] sm:w-[38vh] mt-4 border-[12px] border-gray-200">
             <h3 className="text-2xl mt-6 font-bold">
-              3 Room <br /> Apartment
+              4 Room
+              <br /> Apartment
+              
             </h3>
-            <p className="text-xs mt-3 text-gray-600 line-through">$99,999</p>
-            <h4 className="text-xl">$79,000</h4>
+            <p className="text-xs mt-3 text-gray-600 line-through">$129,999</p>
+            <h4 className="text-xl">$109,000</h4>
             <p className="mt-5 mb-1">
-              135m<sup>2</sup>
+              198m<sup>2</sup>
             </p>
             <hr />
             <p className="mb-1">
-              45m<sup>2</sup>
+              67m<sup>2</sup>
             </p>
             <hr />
             <p className="mb-1">X</p>
             <hr />
-            <p className="mb-1">7</p>
+            <p className="mb-1">9</p>
 
-            <button className="text-xs ml-6 rounded-full mt-4 p-1 w-[20vh] border border-gray-400">
+            <button className="text-xs lg:ml-6 ml-8 font-semibold rounded-full mt-4 p-1 w-[20vh] border border-gray-400">
               APARTMENT DETAILS
             </button>
             <br />
